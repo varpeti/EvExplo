@@ -1,8 +1,6 @@
--- https://imgur.com/a/QJSEriq
-
+local VERSION = 0.1
 
 local difficiculty = 4
-
 
 local core       = {hp=0,dmg=0}
 local firewall   = {hp=0,dmg=0}
@@ -79,6 +77,10 @@ for x=1,10 do
     table.insert(map,col)
 end
 
+function love.load()
+    love.window.setTitle("EvExplo")
+end
+
 function love.update(dt)
 end
 
@@ -136,7 +138,6 @@ function drawExtra(node)
 end
 
 function love.draw()
-    love.graphics.setColor(1,1,1,1)
     for x,col in ipairs(map) do
         for y,node in ipairs(col) do
 
